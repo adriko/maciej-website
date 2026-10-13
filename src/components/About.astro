@@ -1,0 +1,53 @@
+---
+// src/components/About.astro
+---
+<section id="o-mnie" class="py-24 bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Zdjęcie Maćka -->
+      <div class="lg:col-span-5">
+        <div class="relative">
+          <div class="absolute -inset-4 bg-hato-sand/20 rounded-2xl -rotate-2"></div>
+          <img
+            src="/maciek.jpg"
+            alt="Maciej Korzeń - Kierownik budowy i inspektor nadzoru"
+            class="relative rounded-xl object-cover object-top w-full h-[520px] shadow-xl border border-gray-200"
+          />
+          <div class="absolute bottom-6 left-6 right-6 bg-hato-green-dark/95 backdrop-blur-md text-white p-4 rounded-xl border border-hato-sand/30 shadow-lg">
+            <p class="font-display font-bold text-base text-hato-sand">inż. Maciej Korzeń</p>
+            <p class="text-xs text-gray-300 mt-0.5">Uprawnienia budowlane bez ograniczeń • Członek PIIB</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Treść o mnie -->
+      <div class="lg:col-span-7">
+        <span class="text-hato-sand-dark font-semibold text-xs uppercase tracking-widest block mb-3">
+          O mnie & Doświadczenie
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-hato-green mb-6 leading-tight">
+          Praktyczna wiedza inżynierska i skrupulatność na placu budowy.
+        </h2>
+        
+        <p class="text-gray-600 text-base leading-relaxed mb-6">
+          Nazywam się Maciej Korzeń. Jako inżynier łączę wiedzę techniczną, znajomość aktualnych przepisów prawa budowlanego oraz codzienne doświadczenie na placu budowy. Moim celem jest zdjęcie z barków Inwestora całego stresu związanego z realizacją inwestycji.
+        </p>
+
+        <p class="text-gray-600 text-base leading-relaxed mb-8">
+          Niezależnie od tego, czy budujesz dom jednorodzinny, modernizujesz obiekt czy potrzebujesz pewnego projektu i odbioru technicznego – dbam o to, by każda decyzja i wydana kwota przekładały się na jakość, trwałość i bezpieczeństwo na lata.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+          <div class="p-5 rounded-xl bg-hato-cream border border-hato-sand-light/60">
+            <div class="text-hato-green font-display font-bold text-lg mb-1">Uprawnienia Budowlane</div>
+            <p class="text-sm text-gray-600 leading-relaxed">Uprawnienia do kierowania robotami budowlanymi oraz sprawowania nadzoru technicznego.</p>
+          </div>
+          <div class="p-5 rounded-xl bg-hato-cream border border-hato-sand-light/60">
+            <div class="text-hato-green font-display font-bold text-lg mb-1">Czynny członek PIIB</div>
+            <p class="text-sm text-gray-600 leading-relaxed">Polska Izba Inżynierów Budownictwa z aktualnym ubezpieczeniem OC inżyniera.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+// src/components/Area.astro
+---
+<section id="obszar" class="py-20 bg-hato-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-hato-green rounded-2xl p-8 sm:p-12 text-white relative overflow-hidden">
+      <div class="relative z-10 max-w-3xl">
+        <span class="text-hato-sand font-semibold text-xs uppercase tracking-widest block mb-2">
+          Obszar świadczenia usług
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-hato-cream mb-4">
+          Dojazd na budowę i elastyczność lokalna
+        </h2>
+        <p class="text-gray-300 text-base mb-8">
+          Świadczę usługi nadzorów i odbiorów na terenie całego województwa oraz okolicznych powiatów. W przypadku projektów i ekspertyz obsługuję klientów na szerszym obszarze.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          {["Obszar lokalny & region", "Dojazd na budowę", "Szybki czas reakcji", "Elastyczne godziny odbiorów"].map((item) => (
+            <span class="px-4 py-2 rounded-lg bg-hato-green-light border border-hato-sand/30 text-hato-sand text-sm font-medium">
+              ✓ {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

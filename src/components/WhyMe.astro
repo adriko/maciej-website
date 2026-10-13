@@ -1,0 +1,56 @@
+---
+// src/components/WhyMe.astro
+
+const values = [
+  {
+    title: "100% Niezależności",
+    desc: "Nie mam powiązań prowizyjnych z wykonawcami ani hurtowniami. Działam wyłącznie w Twoim interesie, pilnując jakości i realnych cen materiałów.",
+  },
+  {
+    title: "Ochrona Budżetu",
+    desc: "Wykrycie błędu na etapie zbrojenia czy izolacji to oszczędność dziesiątek tysięcy złotych, które musiałbyś wydać na późniejsze kosztowne poprawki.",
+  },
+  {
+    title: "Spokój Formalny",
+    desc: "Biorę pełną odpowiedzialność za prawidłowość wpisów w dzienniku budowy oraz kompletność dokumentacji wymaganej przez Powiatowy Inspektorat Nadzoru Budowlanego.",
+  },
+  {
+    title: "Obecność na Budowie",
+    desc: "Nadzór nie zza biurka, lecz bezpośrednio na placu budowy podczas kluczowych prac ulegających zakryciu (fundamenty, stropy, zbrojenia, instalacje podposadzkowe).",
+  },
+];
+---
+
+<section id="dlaczego-warto" class="py-24 bg-white border-y border-gray-200">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-hato-sand-dark font-semibold text-xs uppercase tracking-widest block mb-3">
+        Zaufanie & Jakość
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-hato-green mb-4">
+        Dlaczego warto powierzyć nadzór inżynierowi?
+      </h2>
+      <p class="text-gray-600 text-base">
+        Budowa to często największa inwestycja życia. Zyskaj pewność, że wszystko przebiega zgodnie z projektem i sztuką budowlaną.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {values.map((v, i) => (
+        <div class="p-6 rounded-2xl bg-hato-cream/60 border border-hato-sand-light/60 flex flex-col justify-between">
+          <div>
+            <span class="font-display font-extrabold text-3xl text-hato-sand block mb-4">
+              0{i + 1}
+            </span>
+            <h3 class="font-display text-lg font-bold text-hato-green mb-2">
+              {v.title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {v.desc}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

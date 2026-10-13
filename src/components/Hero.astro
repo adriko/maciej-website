@@ -1,0 +1,66 @@
+---
+// src/components/Hero.astro
+---
+<section class="relative bg-hato-green text-white py-24 lg:py-32 overflow-hidden">
+  <!-- Delikatny podkład siatki inżynierskiej -->
+  <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#FAF8F5_1px,transparent_1px)] [background-size:28px_28px]"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-8">
+        <!-- Odznaka -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-hato-sand/15 border border-hato-sand/30 text-hato-sand text-xs font-semibold tracking-wider uppercase mb-6">
+          <span class="w-2 h-2 rounded-full bg-hato-sand animate-pulse"></span>
+          Uprawnienia Budowlane • Niezależny Nadzór • Projekty
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-hato-cream leading-[1.15] mb-6">
+          Bezpieczna budowa i pełna kontrola kosztów Twojej inwestycji.
+        </h1>
+
+        <p class="text-lg sm:text-xl text-gray-300 font-light leading-relaxed mb-10 max-w-2xl">
+          Niezależny kierownik budowy i inspektor nadzoru inwestorskiego. Reprezentuję Twoje interesy, pilnuję jakości wykonawców i dbam o zgodność każdego etapu z projektem i normami.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#kontakt"
+            class="inline-flex items-center justify-center px-8 py-4 bg-hato-sand text-hato-green font-bold rounded-lg hover:bg-hato-sand-light transition-all shadow-lg text-base"
+          >
+            Skonsultuj swoją budowę
+          </a>
+          <a
+            href="#uslugi"
+            class="inline-flex items-center justify-center px-8 py-4 border border-gray-400/40 text-gray-200 font-medium rounded-lg hover:bg-white/5 hover:border-white transition-all text-base"
+          >
+            Zobacz pełny zakres usług
+          </a>
+        </div>
+      </div>
+
+      <!-- Karta z kluczowymi wyróżnikami -->
+      <div class="lg:col-span-4">
+        <div class="bg-hato-green-dark/80 border border-hato-green-light rounded-2xl p-6 sm:p-8 backdrop-blur shadow-2xl">
+          <h3 class="font-display text-xl font-bold text-hato-sand mb-6 pb-3 border-b border-hato-green-light">
+            Dlaczego wsparcie inżyniera jest kluczowe?
+          </h3>
+          <ul class="space-y-4 text-sm text-gray-300">
+            <li class="flex items-start gap-3">
+              <span class="text-hato-sand font-bold text-lg">✓</span>
+              <span><strong>Ochrona przed fuszerkami:</strong> Błędy konstrukcyjne i instalacyjne wychwycone przed zapłatą wykonawcy.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-hato-sand font-bold text-lg">✓</span>
+              <span><strong>Spokój formalno-prawny:</strong> Prowadzenie dziennika budowy, nadzór nad odbiorami i dokumentacją dla nadzoru budowlanego (PINB).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-hato-sand font-bold text-lg">✓</span>
+              <span><strong>100% niezależności:</strong> Działam wyłącznie po stronie Inwestora – bez powiązań z ekipami roboczymi.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

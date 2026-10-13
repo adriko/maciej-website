@@ -1,0 +1,91 @@
+---
+// src/components/Services.astro
+
+const services = [
+  {
+    title: "Kierownik Budowy",
+    desc: "Kompleksowe prowadzenie procesu budowlanego. Przejęcie placu budowy, wpisy do dziennika, bieżąca koordynacja robót i kontrola zgodności z projektem aż po pozwolenie na użytkowanie.",
+    badge: "Inwestycje prywatne i komercyjne",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />`
+  },
+  {
+    title: "Inspektor Nadzoru Inwestorskiego",
+    desc: "Niezależna kontrola jakości wykonywanych prac i rozliczeń finansowych. Jestem Twoimi oczami na budowie – chronię Twój budżet i weryfikuję jakość pracy wykonawców.",
+    badge: "Ochrona interesów inwestora",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`
+  },
+  {
+    title: "Projekty Budowlane i Instalacyjne",
+    desc: "Opracowanie kompletnej dokumentacji projektowej: instalacje sanitarne, wodno-kanalizacyjne, c.o., wentylacja, pompy ciepła oraz adaptacje projektów typowych.",
+    badge: "Dokumentacja i uzgodnienia",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />`
+  },
+  {
+    title: "Odbiory Techniczne Domów i Mieszkań",
+    desc: "Szczegółowy przegląd lokalu od dewelopera lub na rynku wtórnym. Sprawdzenie pionów, kątów, wilgotności, instalacji i stolarki, poparte oficjalnym protokołem usterek.",
+    badge: "Przed podpisaniem aktu",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />`
+  },
+  {
+    title: "Doradztwo i Ekspertyzy Techniczne",
+    desc: "Audyt stanu technicznego budynku przed zakupem, ocena pęknięć, wilgoci, poprawności wykonania izolacji oraz weryfikacja poprawności kosztorysów budowlanych.",
+    badge: "Pewna decyzja zakupowa",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`
+  }
+];
+---
+
+<section id="uslugi" class="py-24 bg-hato-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-hato-sand-dark font-semibold text-xs uppercase tracking-widest block mb-3">
+        Oferta Usług Inżynierskich
+      </span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-hato-green mb-4">
+        Profesjonalny nadzór i projektowanie na każdym etapie
+      </h2>
+      <p class="text-gray-600 text-base">
+        Niezależne wsparcie inżyniera budowlanego gwarantuje zgodność ze sztuką budowlaną, bezpieczeństwo konstrukcji oraz spokój przy odbiorach urzędowych.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service) => (
+        <div class="bg-white rounded-2xl p-8 border border-gray-200/80 hover:border-hato-sand transition-all duration-300 hover:shadow-xl flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-hato-cream border border-hato-sand-light text-hato-green flex items-center justify-center mb-6 group-hover:bg-hato-green group-hover:text-hato-sand transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" set:html={service.icon} />
+            </div>
+            <span class="text-[11px] font-semibold text-hato-sand-dark uppercase tracking-wider block mb-2">
+              {service.badge}
+            </span>
+            <h3 class="font-display text-xl font-bold text-hato-green mb-3">
+              {service.title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+              {service.desc}
+            </p>
+          </div>
+          <a href="#kontakt" class="inline-flex items-center text-sm font-semibold text-hato-green group-hover:text-hato-sand-dark transition-colors">
+            Zapytaj o tę usługę
+            <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+      ))}
+
+      <!-- Karta kontaktowa zamykająca siatkę -->
+      <div class="bg-hato-green rounded-2xl p-8 border border-hato-green-light text-white flex flex-col justify-between">
+        <div>
+          <span class="text-hato-sand text-xs font-semibold uppercase tracking-wider block mb-2">Indywidualna wycena</span>
+          <h3 class="font-display text-2xl font-bold text-hato-cream mb-4">Potrzebujesz nietypowego zakresu?</h3>
+          <p class="text-gray-300 text-sm leading-relaxed mb-6">
+            Każda inwestycja ma inną specyfikę. Zadzwoń lub napisz – omówimy projekt i dobierzemy optymalny zakres obsługi inżynierskiej.
+          </p>
+        </div>
+        <a href="#kontakt" class="inline-flex items-center justify-center px-6 py-3.5 bg-hato-sand text-hato-green font-bold rounded-lg hover:bg-hato-sand-light transition-all text-sm">
+          Skontaktuj się ze mną
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,100 @@
+---
+// src/components/Navbar.astro
+---
+<header class="sticky top-0 z-50 bg-hato-green-dark/95 backdrop-blur-md text-white border-b border-hato-sand/20 shadow-lg transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 h-24 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3.5 group">
+      <div class="w-11 h-11 rounded-xl bg-hato-sand/15 border border-hato-sand/30 flex items-center justify-center text-hato-sand group-hover:bg-hato-sand group-hover:text-hato-green transition-all duration-300 shadow-inner">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      </div>
+      <div>
+        <span class="block font-display font-bold text-xl tracking-wider text-hato-cream group-hover:text-hato-sand transition-colors">
+          HATO
+        </span>
+        <span class="block text-[11px] tracking-widest uppercase text-hato-sand/90 font-medium -mt-0.5">
+          Projekt i Nadzór • Maciej Korzeń
+        </span>
+      </div>
+    </a>
+
+    <!-- Menu Desktop - Większe, czytelniejsze, z eleganckim hoverem -->
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium tracking-wide">
+      <a href="#uslugi" class="relative py-2 text-hato-cream/90 hover:text-hato-sand transition-colors group">
+        Zakres usług
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-hato-sand transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#o-mnie" class="relative py-2 text-hato-cream/90 hover:text-hato-sand transition-colors group">
+        O mnie
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-hato-sand transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#dlaczego-warto" class="relative py-2 text-hato-cream/90 hover:text-hato-sand transition-colors group">
+        Dlaczego warto
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-hato-sand transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#obszar" class="relative py-2 text-hato-cream/90 hover:text-hato-sand transition-colors group">
+        Obszar działania
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-hato-sand transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a href="#kontakt" class="relative py-2 text-hato-cream/90 hover:text-hato-sand transition-colors group">
+        Kontakt
+        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-hato-sand transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </nav>
+
+    <!-- Przycisk Zadzwoń -->
+    <div class="hidden sm:flex items-center">
+      <a
+        href="tel:+48600000000"
+        class="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-hato-sand text-hato-green font-bold text-sm tracking-wide hover:bg-hato-sand-light transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+      >
+        <svg class="w-4 h-4 text-hato-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span>Zadzwoń teraz</span>
+      </a>
+    </div>
+
+    <!-- Przycisk menu mobilnego -->
+    <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-lg text-hato-sand hover:text-white hover:bg-white/5 transition-colors" aria-label="Menu mobilne">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menu Mobilne Rozwijane -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-hato-green-dark border-t border-hato-sand/15 px-6 py-6 space-y-4">
+    <a href="#uslugi" class="block text-hato-cream/90 hover:text-hato-sand font-medium text-base py-1">Zakres usług</a>
+    <a href="#o-mnie" class="block text-hato-cream/90 hover:text-hato-sand font-medium text-base py-1">O mnie</a>
+    <a href="#dlaczego-warto" class="block text-hato-cream/90 hover:text-hato-sand font-medium text-base py-1">Dlaczego warto</a>
+    <a href="#obszar" class="block text-hato-cream/90 hover:text-hato-sand font-medium text-base py-1">Obszar działania</a>
+    <a href="#kontakt" class="block text-hato-cream/90 hover:text-hato-sand font-medium text-base py-1">Kontakt</a>
+    <div class="pt-4 border-t border-hato-green-light">
+      <a href="tel:+48600000000" class="flex items-center justify-center gap-2.5 w-full py-3.5 bg-hato-sand text-hato-green font-bold rounded-lg text-base shadow-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        Zadzwoń do mnie
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+    });
+  });
+</script>

@@ -1,0 +1,24 @@
+---
+// src/components/Footer.astro
+const year = new Date().getFullYear();
+---
+<footer class="bg-hato-green-dark text-white border-t border-hato-green-light py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-hato-green-light">
+      <div>
+        <span class="font-display font-bold text-xl text-hato-cream tracking-wide">HATO Projekt i Nadzór</span>
+        <p class="text-xs text-hato-sand mt-1">inż. Maciej Korzeń • Usługi Inżynierskie i Nadzory Budowlane</p>
+      </div>
+      <div class="flex gap-6 text-sm text-gray-300">
+        <a href="#uslugi" class="hover:text-hato-sand transition-colors">Usługi</a>
+        <a href="#o-mnie" class="hover:text-hato-sand transition-colors">O mnie</a>
+        <a href="#dlaczego-warto" class="hover:text-hato-sand transition-colors">Wartości</a>
+        <a href="#kontakt" class="hover:text-hato-sand transition-colors">Kontakt</a>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+      <p>© {year} HATO Projekt i Nadzór Maciej Korzeń. Wszelkie prawa zastrzeżone.</p>
+      <p>Strona zoptymalizowana pod kątem szybkości i urządzeń mobilnych.</p>
+    </div>
+  </div>
+</footer>
